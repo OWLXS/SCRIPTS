@@ -31,12 +31,12 @@ Balls.ChildAdded:Connect(function(Ball)
             local PlayerPos = Player.Character.HumanoidRootPart.Position
             local Distance = (Ball.Position - PlayerPos).Magnitude
             local Velocity = (OldPosition - Ball.Position).Magnitude
-            if (Distance / Velocity) <= 32 then
+            if (Distance / Velocity) <= 10 then
                 Parry()
             end
         end
         
-        if (os.clock() - OldClock >= 1/160) then
+        if (os.clock() - OldClock >= 1/60) then
             OldClock = os.clock()
             OldPosition = Ball.Position
         end
