@@ -31,7 +31,7 @@ Balls.ChildAdded:Connect(function(Ball)
             local PlayerPos = Player.Character.HumanoidRootPart.Position
             local Distance = (Ball.Position - PlayerPos).Magnitude
             local Velocity = (OldPosition - Ball.Position).Magnitude
-            if (Distance / Velocity) <= 10 then
+            if (Distance / Velocity) <= 20 then
                 Parry()
             end
         end
